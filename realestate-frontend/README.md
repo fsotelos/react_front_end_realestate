@@ -32,3 +32,66 @@ This frontend application is part of a Senior Frontend Developer Technical Test 
 - `application/`: Contains application-specific logic, such as PropertyApplication.js.
 - `__tests__/`: Directory for Jest test files covering components, services, and integration tests.
 - `src/`: Additional source files, including setupTests.js for test configuration.
+
+## Installation and Setup
+
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm (comes with Node.js)
+
+### Steps
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   cd realestate-frontend
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Start the development server:
+   ```
+   npm start
+   ```
+   The application will run on `http://localhost:3000` by default.
+
+4. To run tests:
+   ```
+   npm test
+   ```
+
+5. To build for production:
+   ```
+   npm run build
+   ```
+
+### Backend API Configuration
+
+The frontend connects to a .NET 8/9 backend API that provides property data from a MongoDB database. The API base URL is configured via the `REACT_APP_API_BASE_URL` environment variable.
+
+#### Default Configuration
+- **Base URL**: `https://localhost:7259/api/v1.0`
+- **Endpoints**:
+  - `GET /properties` - Retrieve list of properties with optional filters
+  - `GET /properties/{id}` - Retrieve details for a specific property
+
+#### Environment Variables
+To configure the API connection, create a `.env` file in the root directory:
+
+```
+REACT_APP_API_BASE_URL=https://your-api-domain.com/api/v1.0
+```
+
+#### API Filters
+The properties endpoint supports the following query parameters:
+- `name` - Filter by property name
+- `address` - Filter by property address
+- `minPrice` - Minimum price filter
+- `maxPrice` - Maximum price filter
+
+### Notes
+- Ensure the backend API is running and accessible before starting the frontend.
+- The application uses Create React App for setup and development.
+- CORS must be configured on the backend to allow requests from the frontend domain.
