@@ -1,0 +1,525 @@
+/* Leaflet CSS */
+@import 'leaflet/dist/leaflet.css';
+
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* CSS Variables for Color Palette */
+:root {
+  --primary-color: #1a365d; /* Dark blue */
+  --secondary-color: #f7fafc; /* Light gray */
+  --accent-color: #d4af37; /* Gold */
+  --white: #ffffff;
+  --text-color: #2d3748;
+  --text-muted: #718096;
+}
+
+/* Custom styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  background-color: var(--white);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Property card styles */
+.property-card {
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.property-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.property-card .card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.property-card .card-title {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.property-card .card-text {
+  color: var(--text-muted);
+}
+
+.property-card .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.property-card .btn-primary:hover {
+  background-color: #2d3748;
+  border-color: #2d3748;
+  transform: translateY(-2px);
+}
+
+/* Featured Properties Section */
+.featured-properties {
+  padding: 5rem 0;
+  background-color: var(--secondary-color);
+}
+
+.featured-properties h2 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.featured-properties .subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+/* About Us Section */
+.about-us {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.about-us h2 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-us p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.about-us img {
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact {
+  padding: 5rem 0;
+  background-color: var(--secondary-color);
+}
+
+.contact h2 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact .subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.contact-form {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-control {
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.1);
+}
+
+.contact-form .btn {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background-color: #2d3748;
+  border-color: #2d3748;
+  transform: translateY(-2px);
+}
+
+/* Button hover effects */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar fixed positioning adjustments */
+body {
+  padding-top: 0;
+}
+
+.navbar {
+  padding: 1rem 0;
+}
+
+/* Section spacing */
+.hero {
+  margin-top: -80px;
+  padding-top: 160px;
+}
+
+/* Loading states */
+.spinner-border {
+  color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .property-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Header styles */
+.navbar {
+  background-color: var(--primary-color) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--white) !important;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+.btn-contact {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #b7950b;
+  border-color: #b7950b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Footer styles */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 3rem 0 1rem;
+  margin-top: auto;
+}
+
+.footer h5 {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.footer .text-muted {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--accent-color);
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Hero/Banner styles */
+.hero {
+  background: linear-gradient(135deg, rgba(26, 54, 93, 0.9) 0%, rgba(26, 54, 93, 0.8) 100%),
+              url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: var(--white);
+  padding: 8rem 0 6rem;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-hero {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.btn-hero:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+}
+
+/* Map container */
+.map-container {
+  height: 300px;
+  width: 100%;
+  border-radius: 0.375rem;
+}
+
+/* Loading spinner */
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Search Page Styles */
+.search-page {
+  background-color: var(--secondary-color);
+  min-height: 100vh;
+  padding-top: 2rem;
+}
+
+.search-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.search-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.search-interface {
+  border-radius: 1rem;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.search-results-info h5 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.search-results-header {
+  padding: 1rem 0;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.empty-search {
+  padding: 3rem;
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .search-hero .display-4 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    margin-top: 2rem;
+  }
+
+  .hero {
+    padding: 6rem 0 4rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .featured-properties,
+  .about-us,
+  .contact {
+    padding: 4rem 0;
+  }
+
+  .featured-properties h2,
+  .about-us h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .featured-properties,
+  .about-us,
+  .contact {
+    padding: 3rem 0;
+  }
+
+  .featured-properties h2,
+  .about-us h2,
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-form {
+    padding: 2rem 1.5rem;
+  }
+
+  .property-card {
+    margin-bottom: 2rem;
+  }
+
+  .search-title {
+    font-size: 2rem;
+  }
+
+  .search-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .btn-hero {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .featured-properties h2,
+  .about-us h2,
+  .contact h2 {
+    font-size: 1.6rem;
+  }
+
+  .search-title {
+    font-size: 1.8rem;
+  }
+
+  .search-subtitle {
+    font-size: 0.95rem;
+  }
+}
