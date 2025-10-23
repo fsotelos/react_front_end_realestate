@@ -26,6 +26,9 @@ This frontend application is part of a Senior Frontend Developer Technical Test 
 
 ## Folder Structure
 
+<img width="196" height="247" alt="image" src="https://github.com/user-attachments/assets/b2ac5f51-c6c1-4a1f-9e2c-3ca50695ba2d" />
+
+
 - `components/`: Contains reusable UI components such as PropertyCard, PropertyList, Filters, and Header.
 - `services/`: Houses service modules like api.js and PropertyService.js for handling API interactions and business logic.
 - `repositories/`: Includes PropertyRepository.js for data access and management.
