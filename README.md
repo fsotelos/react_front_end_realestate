@@ -98,3 +98,17 @@ The properties endpoint supports the following query parameters:
 - Ensure the backend API is running and accessible before starting the frontend.
 - The application uses Create React App for setup and development.
 - CORS must be configured on the backend to allow requests from the frontend domain.
+
+## 📹 Demo Video
+
+[![Watch the video](https://img.youtube.com/vi/3lNAKKzeXmQ/0.jpg)](https://youtu.be/3lNAKKzeXmQ)
+
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👤 Author
+
+**Felipe Sotelo**  
+**Email:** felipe.sotelo@live.com
